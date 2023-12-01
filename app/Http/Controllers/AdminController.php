@@ -4,20 +4,24 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class ArticlesController extends Controller
+class AdminController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
-{
-    return view("articles");
-}
+    {
+       return view('admin.index');
+    }
 
     /**
      * Show the form for creating a new resource.
      */
-    public function create()
+
+     public function __construct() {
+        $this->middleware('auth');
+    }
+     public function create()
     {
         //
     }
