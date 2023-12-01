@@ -1,16 +1,10 @@
-
 <!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
-        <x-app-layout>
-            <x-slot name="header">
-                <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-                    {{ __('Admin Section') }}
-                </h2>
-            </x-slot>
+
         <title>{{ config('app.name', 'Laravel') }}</title>
 
         <!-- Fonts -->
@@ -50,24 +44,29 @@
             <ul class="mt-8">
                 <li>
                     <a
-                        href="#"
+                        href="{{ route('admin') }}"
                         class="block px-4 py-2 hover:bg-indigo-800 rounded-md"
                         >Home</a
                     >
                     <a
-                        href="#"
+                        href="{{ route('admin-users') }}"
                         class="block px-4 py-2 hover:bg-indigo-800 rounded-md"
-                        >About</a
+                        >All Users</a
                     >
                     <a
                         href="#"
                         class="block px-4 py-2 hover:bg-indigo-800 rounded-md"
-                        >Products</a
+                        >Create User</a
                     >
                     <a
                         href="#"
                         class="block px-4 py-2 hover:bg-indigo-800 rounded-md"
-                        >Pricing</a
+                        >All Posts</a
+                    >
+                    <a
+                        href="#"
+                        class="block px-4 py-2 hover:bg-indigo-800 rounded-md"
+                        >Create Post</a
                     >
                 </li>
             </ul>
@@ -94,13 +93,12 @@
                     </svg>
                 </button>
                 <span class="block text-2xl sm:text-3xl font-bold p-4"
-                    >AlpineJS</span
+                    >{{ $header }}</span
                 >
             </header>
+            <main>
+                {{ $slot }}
+            </main>
         </div>
-    </div>
-
     </body>
 </html>
-This is the content of my admin home
-</x-admin-layout>
