@@ -33,4 +33,7 @@ Route::get('/admin', [AdminController::class, 'index'])->name('admin');
 Route::get('/admin/users', [
     AdminUsersController::class, 'index'
 ])->middleware('auth')->name('admin-users');
+Route::get('/admin/users/create', [
+    AdminUsersController::class, 'create'
+])->middleware('auth')->name('admin-users-create');
 require __DIR__.'/auth.php';
