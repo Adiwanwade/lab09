@@ -12,7 +12,7 @@ class AdminUsersController extends Controller
      */
     public function index()
     {
-        return view('admin.users.index');
+
         $users = User::all();
 
         return view('admin.users.index', compact(['users']));
@@ -23,7 +23,7 @@ class AdminUsersController extends Controller
      */
     public function create()
     {
-        return view('admin.users.create');
+
         $roles = Role::all();
         return view('admin.users.create', compact('roles'));
     }
