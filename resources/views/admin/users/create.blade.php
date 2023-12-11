@@ -20,23 +20,23 @@
 
     <!-- Active -->
     <div class="p-2">
-        <label for="active">{{ __('Active') }}</label>
+        <label for="active">{{ __('Active:') }}</label>
         <select name="active" id="active">
             <option value="1">Yes</option>
             <option value="2">No</option>
         </select>
     </div>
-
+    
     <!-- Role -->
     <div>
-        <label for="role_id">{{ __('Role') }}</label>
+        <label for="role_id">{{ __('Role:') }}</label>
         <select name="role_id" id="role_id">
             @foreach ($roles as $role)
             <option value="{{ $role->id }}">{{ $role->name }}</option>
             @endforeach
         </select>
     </div>
-
+<br>
     <div class="block">
         <x-primary-button type="submit">Create</x-primary-button>
     </div>
