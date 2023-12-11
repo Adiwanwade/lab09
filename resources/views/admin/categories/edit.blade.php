@@ -15,7 +15,7 @@
         <x-form-errors />
 
         <div class="block">
-            <x-primary-button type="submit">Create</x-primary-button>
+            <x-primary-button type="submit">Update</x-primary-button>
         </div>
 
     </form>
