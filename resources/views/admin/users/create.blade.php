@@ -2,7 +2,7 @@
     <x-slot name="header">
         {{ __('Admin > Create User')}}
     </x-slot>
-New View
+
 <form method="POST" action="{{ route('admin-users-create') }}" class="p-3">
     @csrf
 
