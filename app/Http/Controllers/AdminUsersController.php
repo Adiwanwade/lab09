@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Models\User;
+use App\Http\Requests\AddUserRequest;
 use Illuminate\Http\Request;
 use App\Models\Role;
 use Illuminate\Support\Facades\Hash;
@@ -32,7 +33,7 @@ class AdminUsersController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(AddUserRequest $request)
     {
         $user = $request->all();
         $user['password'] = Hash::make('Admin123');
