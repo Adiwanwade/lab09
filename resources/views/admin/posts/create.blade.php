@@ -40,9 +40,8 @@
 
     </form>
     <x-slot name="scripts">
-        <script src="https://cdn.ckeditor.com/ckeditor5/40.1.0/classic/ckeditor.js"></script>
-    </x-slot>
-    <script>
+    <script src="https://cdn.ckeditor.com/ckeditor5/40.1.0/classic/ckeditor.js"></script>
+        <script>
         ClassicEditor
             .create( document.querySelector( '#content1' ) )
             .then( editor => {
@@ -52,4 +51,5 @@
                     console.error( error );
             } );
     </script>
+     </x-slot>
 </x-admin-layout>

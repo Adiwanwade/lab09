@@ -2,7 +2,7 @@
     <x-slot name="header">
         {{ __('Admin > Edit Post')}}
     </x-slot>
-    <form method="POST" action="{{ route('admin-posts-edit', $post->id) }}" class="p-3">
+    <form method="POST" action="{{ route('admin-posts-edit',$post->id) }}" class="p-3">
         @csrf
         @method('PATCH')
 
